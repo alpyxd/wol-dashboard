@@ -2,6 +2,12 @@
 
 Ev ağı için tek dosyalık, bağımlılıksız (yalnızca Node.js yerleşik modülleri) Wake-on-LAN paneli.
 
+![WoL Dashboard — masaüstü görünümü](docs/screenshot.png)
+
+<p align="center"><img src="docs/screenshot-mobile.png" width="280" alt="WoL Dashboard — telefon görünümü"></p>
+
+<sub>Ekran görüntülerindeki cihazlar, IP ve MAC adresleri örnek veridir.</sub>
+
 - Cihaz kaydı, PIN ile giriş
 - Canlı durum (ping + TCP + ARP), uyanma takibi
 - Zamanlanmış uyandırma, uyandırma geçmişi
