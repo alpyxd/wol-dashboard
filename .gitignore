@@ -1,0 +1,21 @@
+# Kişisel veri: cihazlar, PIN özeti, oturumlar, ajan tokeni ve SSH anahtarları
+data/
+data.json
+data.json.*
+keys/
+*.bak
+backups/
+
+# Anahtar / sır dosyaları
+id_*
+*.pem
+*.key
+.env
+.env.*
+
+# Yedek arşivleri
+*.tgz
+*.tar.gz
+*.zip
+
+node_modules/

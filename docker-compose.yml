@@ -1,0 +1,23 @@
+services:
+  wol-dashboard:
+    build: .
+    image: wol-dashboard:latest
+    container_name: wol-dashboard
+    # Magic packet LAN'a broadcast gider; bridge ağı bunu iletmez, host ağı şart
+    network_mode: host
+    # ip neigh flush (ARP tazeleme) için NET_ADMIN, ping için NET_RAW
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    environment:
+      - PORT=80
+      - WOL_DATA_DIR=/data
+      - TZ=Europe/Istanbul
+    volumes:
+      - ./data:/data
+    restart: unless-stopped
+    logging:
+      driver: json-file
+      options:
+        max-size: "5m"
+        max-file: "3"
